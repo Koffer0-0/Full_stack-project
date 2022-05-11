@@ -1,12 +1,12 @@
 package com.example.snickersdevops.service.usermanagement;
 
-import jorge.rv.quizzz.exceptions.UserAlreadyExistsException;
-import jorge.rv.quizzz.model.RegistrationToken;
-import jorge.rv.quizzz.model.TokenType;
-import jorge.rv.quizzz.model.User;
-import jorge.rv.quizzz.service.UserService;
-import jorge.rv.quizzz.service.usermanagement.token.TokenDeliverySystem;
-import jorge.rv.quizzz.service.usermanagement.token.TokenServiceRegistration;
+import com.example.snickersdevops.exceptions.UserAlreadyExistsException;
+import com.example.snickersdevops.model.RegistrationToken;
+import com.example.snickersdevops.model.TokenType;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.service.UserService;
+import com.example.snickersdevops.service.usermanagement.token.TokenDeliverySystem;
+import com.example.snickersdevops.service.usermanagement.token.TokenServiceRegistration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

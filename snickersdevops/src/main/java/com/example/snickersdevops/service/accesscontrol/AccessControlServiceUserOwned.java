@@ -1,9 +1,7 @@
 package com.example.snickersdevops.service.accesscontrol;
 
-import jorge.rv.quizzz.exceptions.UnauthorizedActionException;
-import jorge.rv.quizzz.model.AuthenticatedUser;
-import jorge.rv.quizzz.model.BaseModel;
-import jorge.rv.quizzz.model.UserOwned;
+import com.example.snickersdevops.exceptions.*;
+import com.example.snickersdevops.model.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;

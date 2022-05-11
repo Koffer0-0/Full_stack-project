@@ -1,9 +1,9 @@
 package com.example.snickersdevops.service.usermanagement.token;
 
-import jorge.rv.quizzz.model.TokenModel;
-import jorge.rv.quizzz.model.TokenType;
-import jorge.rv.quizzz.model.User;
-import jorge.rv.quizzz.service.accesscontrol.AccessControlServiceUserOwned;
+import com.example.snickersdevops.model.TokenModel;
+import com.example.snickersdevops.model.TokenType;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.service.accesscontrol.AccessControlServiceUserOwned;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

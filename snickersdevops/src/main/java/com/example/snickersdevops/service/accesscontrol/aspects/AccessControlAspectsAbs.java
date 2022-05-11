@@ -1,8 +1,8 @@
 package com.example.snickersdevops.service.accesscontrol.aspects;
 
-import jorge.rv.quizzz.model.BaseModel;
-import jorge.rv.quizzz.model.UserOwned;
-import jorge.rv.quizzz.service.accesscontrol.AccessControlService;
+import com.example.snickersdevops.model.BaseModel;
+import com.example.snickersdevops.model.UserOwned;
+import com.example.snickersdevops.service.accesscontrol.AccessControlService;
 import org.aspectj.lang.ProceedingJoinPoint;
 
 public abstract class AccessControlAspectsAbs<T extends BaseModel & UserOwned> implements AccessControlAspects<T> {

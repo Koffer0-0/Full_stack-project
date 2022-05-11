@@ -1,7 +1,7 @@
 package com.example.snickersdevops.service.accesscontrol.aspects;
 
-import jorge.rv.quizzz.model.User;
-import jorge.rv.quizzz.service.accesscontrol.AccessControlService;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.service.accesscontrol.AccessControlService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -19,7 +19,7 @@ public class AccessControlAspectsUser {
 		this.accessControlService = accessControlService;
 	}
 
-	@Around("execution(* jorge.rv.quizzz.repository.UserRepository.save(..)) && args(user)")
+	@Around("execution(*  com.example.snickersdevops.repository.UserRepository.save(..)) && args(user)")
 	public Object save(ProceedingJoinPoint proceedingJoinPoint, User user) throws Throwable {
 		if (user.getId() == null) {
 			accessControlService.canCurrentUserCreateObject(user);
@@ -30,21 +30,21 @@ public class AccessControlAspectsUser {
 		return proceedingJoinPoint.proceed();
 	}
 
-	@Around("execution(* jorge.rv.quizzz.repository.UserRepository.find(Long)) && args(id)")
+	@Around("execution(*  com.example.snickersdevops.repository.UserRepository.find(Long)) && args(id)")
 	public Object find(ProceedingJoinPoint proceedingJoinPoint, Long id) throws Throwable {
 		accessControlService.canCurrentUserReadObject(id);
 
 		return proceedingJoinPoint.proceed();
 	}
 
-	@Around("execution(* jorge.rv.quizzz.repository.UserRepository.findAll())")
+	@Around("execution(*  com.example.snickersdevops.repository.UserRepository.findAll())")
 	public Object findAll(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 		accessControlService.canCurrentUserReadAllObjects();
 
 		return proceedingJoinPoint.proceed();
 	}
 
-	@Around("execution(* jorge.rv.quizzz.repository.UserRepository.delete(..)) && args(user)")
+	@Around("execution(*  com.example.snickersdevops.repository.UserRepository.delete(..)) && args(user)")
 	public Object delete(ProceedingJoinPoint proceedingJoinPoint, User user) throws Throwable {
 		accessControlService.canCurrentUserDeleteObject(user);
 

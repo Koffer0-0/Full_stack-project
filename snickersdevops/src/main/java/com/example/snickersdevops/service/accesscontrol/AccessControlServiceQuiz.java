@@ -1,8 +1,7 @@
 package com.example.snickersdevops.service.accesscontrol;
 
-import jorge.rv.quizzz.exceptions.UnauthorizedActionException;
-import jorge.rv.quizzz.model.AuthenticatedUser;
-import jorge.rv.quizzz.model.Quiz;
+import com.example.snickersdevops.exceptions.*;
+import com.example.snickersdevops.model.*;
 import org.springframework.stereotype.Service;
 
 @Service("AccessControlQuiz")

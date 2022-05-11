@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import javax.servlet.http.HttpServletRequest;
 
-@ControllerAdvice("jorge.rv.quizzz.controller.rest.v1")
+@ControllerAdvice("com.example.snickersdevops.controller.rest.v1")
 public class RestExceptionHandler {
 
 	@ExceptionHandler(UnauthorizedActionException.class)

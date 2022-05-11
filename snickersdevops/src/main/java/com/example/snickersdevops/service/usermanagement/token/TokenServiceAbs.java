@@ -1,11 +1,11 @@
 package com.example.snickersdevops.service.usermanagement.token;
 
-import jorge.rv.quizzz.exceptions.InvalidTokenException;
-import jorge.rv.quizzz.model.TokenModel;
-import jorge.rv.quizzz.model.User;
-import jorge.rv.quizzz.repository.TokenRepository;
-import jorge.rv.quizzz.service.usermanagement.utils.DateHelper;
-import jorge.rv.quizzz.service.usermanagement.utils.TokenGenerator;
+import com.example.snickersdevops.exceptions.InvalidTokenException;
+import com.example.snickersdevops.model.TokenModel;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.repository.TokenRepository;
+import com.example.snickersdevops.service.usermanagement.utils.DateHelper;
+import com.example.snickersdevops.service.usermanagement.utils.TokenGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.transaction.Transactional;

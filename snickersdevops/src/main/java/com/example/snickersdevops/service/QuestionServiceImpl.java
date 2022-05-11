@@ -1,12 +1,12 @@
 package com.example.snickersdevops.service;
 
-import jorge.rv.quizzz.exceptions.ActionRefusedException;
-import jorge.rv.quizzz.exceptions.ResourceUnavailableException;
-import jorge.rv.quizzz.exceptions.UnauthorizedActionException;
-import jorge.rv.quizzz.model.Answer;
-import jorge.rv.quizzz.model.Question;
-import jorge.rv.quizzz.model.Quiz;
-import jorge.rv.quizzz.repository.QuestionRepository;
+import com.example.snickersdevops.exceptions.ActionRefusedException;
+import com.example.snickersdevops.exceptions.ResourceUnavailableException;
+import com.example.snickersdevops.exceptions.UnauthorizedActionException;
+import com.example.snickersdevops.model.Answer;
+import com.example.snickersdevops.model.Question;
+import com.example.snickersdevops.model.Quiz;
+import com.example.snickersdevops.repository.QuestionRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class QuestionServiceImpl implements QuestionService {
 
 	@Override
 	public Question find(Long id) throws ResourceUnavailableException {
-		Question question = questionRepository.findOne(id);
+		Question question = questionRepository.findById(id).orElseGet(null);
 
 		if (question == null) {
 			logger.error("Question " + id + " not found");

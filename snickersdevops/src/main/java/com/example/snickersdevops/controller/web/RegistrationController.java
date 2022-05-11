@@ -3,9 +3,9 @@ package com.example.snickersdevops.controller.web;
 import com.example.snickersdevops.controller.utils.RestVerifier;
 import com.example.snickersdevops.exceptions.ModelVerificationException;
 import com.example.snickersdevops.exceptions.UserAlreadyExistsException;
-import com.example.snickersdevops.model.*;
-import com.example.snickersdevops.service.*;
-import com.example.snickersdevops.service.usermanagement.*;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.service.UserService;
+import com.example.snickersdevops.service.usermanagement.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.validation.Valid;
 
 
 @Controller

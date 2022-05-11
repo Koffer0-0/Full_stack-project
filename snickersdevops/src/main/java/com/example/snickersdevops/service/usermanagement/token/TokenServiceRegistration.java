@@ -1,8 +1,8 @@
 package com.example.snickersdevops.service.usermanagement.token;
 
-import jorge.rv.quizzz.model.RegistrationToken;
-import jorge.rv.quizzz.repository.RegistrationTokenRepository;
-import jorge.rv.quizzz.service.usermanagement.utils.TokenGenerator;
+import com.example.snickersdevops.model.RegistrationToken;
+import com.example.snickersdevops.repository.RegistrationTokenRepository;
+import com.example.snickersdevops.service.usermanagement.utils.TokenGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package com.example.snickersdevops.service.accesscontrol.aspects;
 
-import jorge.rv.quizzz.model.Answer;
-import jorge.rv.quizzz.service.accesscontrol.AccessControlService;
+import com.example.snickersdevops.model.Answer;
+import com.example.snickersdevops.service.accesscontrol.AccessControlService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -19,7 +19,7 @@ public class AccessControlAspectsAnswer {
 		this.accessControlService = accessControlService;
 	}
 
-	@Around("execution(* jorge.rv.quizzz.repository.AnswerRepository.save(..)) && args(answer)")
+	@Around("execution(*  com.example.snickersdevops.repository.AnswerRepository.save(..)) && args(answer)")
 	public Object save(ProceedingJoinPoint proceedingJoinPoint, Answer answer) throws Throwable {
 		if (answer.getId() == null) {
 			accessControlService.canCurrentUserCreateObject(answer);
@@ -30,21 +30,21 @@ public class AccessControlAspectsAnswer {
 		return proceedingJoinPoint.proceed();
 	}
 
-	@Around("execution(* jorge.rv.quizzz.repository.AnswerRepository.find(Long)) && args(id)")
+	@Around("execution(*  com.example.snickersdevops.repository.AnswerRepository.find(Long)) && args(id)")
 	public Object find(ProceedingJoinPoint proceedingJoinPoint, Long id) throws Throwable {
 		accessControlService.canCurrentUserReadObject(id);
 
 		return proceedingJoinPoint.proceed();
 	}
 
-	@Around("execution(* jorge.rv.quizzz.repository.AnswerRepository.findAll())")
+	@Around("execution(*  com.example.snickersdevops.repository.AnswerRepository.findAll())")
 	public Object findAll(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 		accessControlService.canCurrentUserReadAllObjects();
 
 		return proceedingJoinPoint.proceed();
 	}
 
-	@Around("execution(* jorge.rv.quizzz.repository.AnswerRepository.delete(..)) && args(answer)")
+	@Around("execution(* com.example.snickersdevops.repository.AnswerRepository.delete(..)) && args(answer)")
 	public Object delete(ProceedingJoinPoint proceedingJoinPoint, Answer answer) throws Throwable {
 		accessControlService.canCurrentUserDeleteObject(answer);
 

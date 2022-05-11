@@ -1,6 +1,6 @@
 package com.example.snickersdevops.service.accesscontrol;
 
-import jorge.rv.quizzz.model.Question;
+import com.example.snickersdevops.model.Question;
 import org.springframework.stereotype.Service;
 
 @Service

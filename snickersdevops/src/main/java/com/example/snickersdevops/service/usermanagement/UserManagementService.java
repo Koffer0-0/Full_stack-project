@@ -1,6 +1,7 @@
 package com.example.snickersdevops.service.usermanagement;
 
-import jorge.rv.quizzz.model.User;
+
+import com.example.snickersdevops.model.User;
 
 public interface UserManagementService {
 

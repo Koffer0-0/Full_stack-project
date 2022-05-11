@@ -1,11 +1,11 @@
 package com.example.snickersdevops.service;
 
-import jorge.rv.quizzz.exceptions.ResourceUnavailableException;
-import jorge.rv.quizzz.exceptions.UnauthorizedActionException;
-import jorge.rv.quizzz.model.Quiz;
-import jorge.rv.quizzz.model.User;
-import jorge.rv.quizzz.model.support.Response;
-import jorge.rv.quizzz.model.support.Result;
+import com.example.snickersdevops.exceptions.ResourceUnavailableException;
+import com.example.snickersdevops.exceptions.UnauthorizedActionException;
+import com.example.snickersdevops.model.Quiz;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.model.support.Response;
+import com.example.snickersdevops.model.support.Result;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

@@ -1,14 +1,17 @@
 package com.example.snickersdevops.controller.rest.v1;
 
 import com.example.snickersdevops.controller.utils.RestVerifier;
-import com.example.snickersdevops.model.*;
-import com.example.snickersdevops.service.*;
+import com.example.snickersdevops.model.Answer;
+import com.example.snickersdevops.model.Question;
+import com.example.snickersdevops.service.AnswerService;
+import com.example.snickersdevops.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController

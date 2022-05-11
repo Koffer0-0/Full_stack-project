@@ -1,8 +1,8 @@
 package com.example.snickersdevops.service.usermanagement.token;
 
-import jorge.rv.quizzz.model.TokenModel;
-import jorge.rv.quizzz.model.TokenType;
-import jorge.rv.quizzz.model.User;
+import com.example.snickersdevops.model.TokenModel;
+import com.example.snickersdevops.model.TokenType;
+import com.example.snickersdevops.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.mail.SimpleMailMessage;

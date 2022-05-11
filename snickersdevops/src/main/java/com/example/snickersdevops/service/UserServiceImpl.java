@@ -1,18 +1,14 @@
 package com.example.snickersdevops.service;
 
-import jorge.rv.quizzz.exceptions.ResourceUnavailableException;
-import jorge.rv.quizzz.exceptions.UnauthorizedActionException;
-import jorge.rv.quizzz.exceptions.UserAlreadyExistsException;
-import jorge.rv.quizzz.model.AuthenticatedUser;
-import jorge.rv.quizzz.model.User;
-import jorge.rv.quizzz.repository.UserRepository;
+import com.example.snickersdevops.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
+import com.example.snickersdevops.exceptions.*;
+import com.example.snickersdevops.model.*;
 import javax.transaction.Transactional;
 
 @Service
@@ -78,7 +74,10 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User find(Long id) throws ResourceUnavailableException {
-		User user = userRepository.findOne(id);
+		if (id == null)
+			return null;
+		User user = userRepository.findById(id)
+				.orElseGet(null);
 
 		if (user == null) {
 			logger.error("The user " + id + " can't be found");

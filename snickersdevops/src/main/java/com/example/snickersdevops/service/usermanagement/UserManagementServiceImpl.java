@@ -1,11 +1,11 @@
 package com.example.snickersdevops.service.usermanagement;
 
-import jorge.rv.quizzz.model.ForgotPasswordToken;
-import jorge.rv.quizzz.model.TokenType;
-import jorge.rv.quizzz.model.User;
-import jorge.rv.quizzz.service.UserService;
-import jorge.rv.quizzz.service.usermanagement.token.TokenDeliverySystem;
-import jorge.rv.quizzz.service.usermanagement.token.TokenServiceForgotPassword;
+import com.example.snickersdevops.model.ForgotPasswordToken;
+import com.example.snickersdevops.model.TokenType;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.service.UserService;
+import com.example.snickersdevops.service.usermanagement.token.TokenDeliverySystem;
+import com.example.snickersdevops.service.usermanagement.token.TokenServiceForgotPassword;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

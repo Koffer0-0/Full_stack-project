@@ -1,8 +1,7 @@
 package com.example.snickersdevops.service.accesscontrol;
 
-import jorge.rv.quizzz.exceptions.UnauthorizedActionException;
-import jorge.rv.quizzz.model.AuthenticatedUser;
-import jorge.rv.quizzz.model.BaseModel;
+import com.example.snickersdevops.exceptions.*;
+import com.example.snickersdevops.model.*;
 
 public interface AccessControlService<T extends BaseModel> {
 	void canUserCreateObject(AuthenticatedUser user, T object) throws UnauthorizedActionException;

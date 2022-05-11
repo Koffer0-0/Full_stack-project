@@ -1,9 +1,13 @@
 package com.example.snickersdevops.controller.rest.v1;
 
 import com.example.snickersdevops.controller.utils.RestVerifier;
-import com.example.snickersdevops.model.*;
-import com.example.snickersdevops.service.*;
-import com.example.snickersdevops.service.usermanagement.*;
+import com.example.snickersdevops.model.AuthenticatedUser;
+import com.example.snickersdevops.model.Quiz;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.service.QuizService;
+import com.example.snickersdevops.service.UserService;
+import com.example.snickersdevops.service.usermanagement.RegistrationService;
+import com.example.snickersdevops.service.usermanagement.UserManagementService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +19,8 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping(UserController.ROOT_MAPPING)

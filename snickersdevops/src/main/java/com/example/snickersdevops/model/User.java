@@ -1,9 +1,9 @@
 package com.example.snickersdevops.model;
 
-import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.*;
+
 import javax.persistence.*;
-import org.hibernate.validator.constraints.Length;
-import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.Calendar;
 

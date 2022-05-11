@@ -1,7 +1,7 @@
 package com.example.snickersdevops.service.usermanagement;
 
-import jorge.rv.quizzz.model.User;
-import jorge.rv.quizzz.service.UserService;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class RegistrationServiceSimple implements RegistrationService {

@@ -1,8 +1,8 @@
 package com.example.snickersdevops.service.usermanagement.token;
 
-import jorge.rv.quizzz.model.ForgotPasswordToken;
-import jorge.rv.quizzz.repository.ForgotPasswordTokenRepository;
-import jorge.rv.quizzz.service.usermanagement.utils.TokenGenerator;
+import com.example.snickersdevops.model.ForgotPasswordToken;
+import com.example.snickersdevops.repository.ForgotPasswordTokenRepository;
+import com.example.snickersdevops.service.usermanagement.utils.TokenGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ public class TokenServiceForgotPassword extends TokenServiceAbs<ForgotPasswordTo
 
 	@Autowired
 	public TokenServiceForgotPassword(ForgotPasswordTokenRepository forgotPasswordTokenRepository,
-			TokenGenerator tokenGenerator) {
+									  TokenGenerator tokenGenerator) {
 		super(tokenGenerator, forgotPasswordTokenRepository);
 	}
 

@@ -1,8 +1,8 @@
 package com.example.snickersdevops.service.usermanagement.token;
 
-import jorge.rv.quizzz.exceptions.InvalidTokenException;
-import jorge.rv.quizzz.model.TokenModel;
-import jorge.rv.quizzz.model.User;
+import com.example.snickersdevops.exceptions.InvalidTokenException;
+import com.example.snickersdevops.model.TokenModel;
+import com.example.snickersdevops.model.User;
 
 import java.util.Date;
 

@@ -1,15 +1,15 @@
 package com.example.snickersdevops.service;
 
-import jorge.rv.quizzz.exceptions.ActionRefusedException;
-import jorge.rv.quizzz.exceptions.InvalidParametersException;
-import jorge.rv.quizzz.exceptions.ResourceUnavailableException;
-import jorge.rv.quizzz.exceptions.UnauthorizedActionException;
-import jorge.rv.quizzz.model.Question;
-import jorge.rv.quizzz.model.Quiz;
-import jorge.rv.quizzz.model.User;
-import jorge.rv.quizzz.model.support.Response;
-import jorge.rv.quizzz.model.support.Result;
-import jorge.rv.quizzz.repository.QuizRepository;
+import com.example.snickersdevops.exceptions.ActionRefusedException;
+import com.example.snickersdevops.exceptions.InvalidParametersException;
+import com.example.snickersdevops.exceptions.ResourceUnavailableException;
+import com.example.snickersdevops.exceptions.UnauthorizedActionException;
+import com.example.snickersdevops.model.Question;
+import com.example.snickersdevops.model.Quiz;
+import com.example.snickersdevops.model.User;
+import com.example.snickersdevops.model.support.Response;
+import com.example.snickersdevops.model.support.Result;
+import com.example.snickersdevops.repository.QuizRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
 @Service("QuizService")
 @Transactional
 public class QuizServiceImpl implements QuizService {
@@ -53,7 +52,7 @@ public class QuizServiceImpl implements QuizService {
 
 	@Override
 	public Quiz find(Long id) throws ResourceUnavailableException {
-		Quiz quiz = quizRepository.findOne(id);
+		Quiz quiz = quizRepository.findById(id).orElseGet(null);
 
 		if (quiz == null) {
 			logger.error("Quiz " + id + " not found");

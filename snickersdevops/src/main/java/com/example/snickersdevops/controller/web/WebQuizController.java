@@ -1,10 +1,13 @@
 package com.example.snickersdevops.controller.web;
 
 import com.example.snickersdevops.controller.utils.RestVerifier;
-import com.example.snickersdevops.exceptions.*;
-import com.example.snickersdevops.model.*;
-import com.example.snickersdevops.service.*;
-import com.example.snickersdevops.service.accesscontrol.*;
+import com.example.snickersdevops.exceptions.ModelVerificationException;
+import com.example.snickersdevops.model.AuthenticatedUser;
+import com.example.snickersdevops.model.Question;
+import com.example.snickersdevops.model.Quiz;
+import com.example.snickersdevops.service.QuestionService;
+import com.example.snickersdevops.service.QuizService;
+import com.example.snickersdevops.service.accesscontrol.AccessControlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.Map;
 
 @Controller
@@ -46,7 +50,7 @@ public class WebQuizController {
 	@RequestMapping(value = "/createQuiz", method = RequestMethod.POST)
 	@PreAuthorize("isAuthenticated()")
 	public String newQuiz(@AuthenticationPrincipal AuthenticatedUser user, @Valid Quiz quiz, BindingResult result,
-			Map<String, Object> model) {
+						  Map<String, Object> model) {
 		Quiz newQuiz;
 
 		try {

@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
-@ControllerAdvice("jorge.rv.quizzz.controller.web")
+@ControllerAdvice("com.example.snickersdevops.controller.web")
 public class WebExceptionHandler {
 
 	@ExceptionHandler(UnauthorizedActionException.class)

@@ -1,10 +1,8 @@
 package com.example.snickersdevops.service;
 
-import jorge.rv.quizzz.exceptions.ResourceUnavailableException;
-import jorge.rv.quizzz.exceptions.UnauthorizedActionException;
-import jorge.rv.quizzz.exceptions.UserAlreadyExistsException;
-import jorge.rv.quizzz.model.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import com.example.snickersdevops.exceptions.*;
+import com.example.snickersdevops.model.*;
 
 public interface UserService extends UserDetailsService {
 	User saveUser(User user) throws UserAlreadyExistsException;

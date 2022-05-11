@@ -6,7 +6,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @EnableAspectJAutoProxy
-@ComponentScan("jorge.rv.quizzz.service")
+
+@ComponentScan("com.example.snickersdevops.service")
 public class AopConfig {
 
 }
